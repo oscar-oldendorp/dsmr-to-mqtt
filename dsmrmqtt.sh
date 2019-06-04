@@ -5,8 +5,9 @@ user="<enter MQTT username"
 pass="<enter MQTT password>"
 main_topic="<enter MQTT main topic>"
 device="<enter serial device>"
+baudrate="<enter baud rate of serial device>"
 
-stty -F $device 115200
+stty -F $device $baudrate
 
 while read line
 do 
