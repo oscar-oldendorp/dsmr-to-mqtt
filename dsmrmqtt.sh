@@ -6,6 +6,8 @@ pass="<enter MQTT password>"
 main_topic="<enter MQTT main topic>"
 device="<enter serial device>"
 
+stty -F $device 115200
+
 while read line
 do 
 a=$(echo $line | grep -e -0: -e -1: -e -3:)
